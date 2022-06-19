@@ -9,6 +9,7 @@ class Circle extends Shape implements MathOperations {
         this.RADIUS = RADIUS;
     }
 
+
     @Override
     public double calculateArea() {
         double resultAreaCircle = (Math.PI * (RADIUS * RADIUS));
