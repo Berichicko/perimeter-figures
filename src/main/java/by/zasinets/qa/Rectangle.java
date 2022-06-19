@@ -13,11 +13,13 @@ class Rectangle extends Shape implements MathOperations {
 
     @Override
     public double calculateArea() {
-        return (LENGTH * WIDTH);
+        double resultAreaRectangle =  (LENGTH * WIDTH);
+        return resultAreaRectangle;
     }
 
     @Override
-    double perimeter() {
-        return ((LENGTH + WIDTH) * 2);
+    double calculatePerimeter() {
+        double resultPerimeterRectangle = ((LENGTH + WIDTH) * 2);
+        return resultPerimeterRectangle;
     }
 }

@@ -11,11 +11,13 @@ class Circle extends Shape implements MathOperations {
 
     @Override
     public double calculateArea() {
-        return (Math.PI * (RADIUS * RADIUS));
+        double resultAreaCircle = (Math.PI * (RADIUS * RADIUS));
+        return resultAreaCircle;
     }
 
     @Override
-    double perimeter() {
-       return (2 * Math.PI * RADIUS);
+    double calculatePerimeter() {
+        double resultPerimeterCircle = (2 * Math.PI * RADIUS);
+        return resultPerimeterCircle;
     }
 }

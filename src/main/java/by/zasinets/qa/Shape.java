@@ -1,13 +1,13 @@
 package by.zasinets.qa;
 
- abstract class Shape {
+abstract class Shape {
 
-     private String color;
+    private final String color;
 
-     public Shape(String color) {
-         this.color = color;
-     }
+    public Shape(String color) {
+        this.color = color;
+    }
 
-      abstract double perimeter();
+    abstract double calculatePerimeter();
 
- }
+}

@@ -13,11 +13,13 @@ class Triangle extends Shape implements MathOperations {
 
     @Override
     public double calculateArea() {
-        return ((WIDTH * HEIGHT) / 2);
+        double resultAreaTriangle =((WIDTH * HEIGHT) / 2);
+        return resultAreaTriangle;
     }
 
     @Override
-    double perimeter() {
-        return (3 * WIDTH);
+    double calculatePerimeter() {
+        double resultPerimeterTriangle = (3 * WIDTH);
+        return resultPerimeterTriangle;
     }
 }
