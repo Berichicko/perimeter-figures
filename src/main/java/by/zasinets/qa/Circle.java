@@ -1,6 +1,6 @@
 package by.zasinets.qa;
 
-class Circle extends Shape implements MathOperations {
+class Circle extends Shape implements Mathable {
 
     private final double RADIUS;
 

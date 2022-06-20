@@ -1,5 +1,5 @@
 package by.zasinets.qa;
 
-public interface MathOperations {
+public interface Mathable {
     double calculateArea();
 }

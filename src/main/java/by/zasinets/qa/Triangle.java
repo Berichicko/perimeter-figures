@@ -1,6 +1,6 @@
 package by.zasinets.qa;
 
-class Triangle extends Shape implements MathOperations {
+class Triangle extends Shape implements Mathable {
 
     private final double WIDTH;
     private final double HEIGHT;

@@ -1,6 +1,6 @@
 package by.zasinets.qa;
 
-class Rectangle extends Shape implements MathOperations {
+class Rectangle extends Shape implements Mathable {
 
     private final double LENGTH;
     private final double WIDTH;
