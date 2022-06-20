@@ -1,38 +1,33 @@
 package by.zasinets.qa;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        Circle circle = new Circle("black", 3);
-        Rectangle rectangle = new Rectangle("red", 3, 3);
-        Triangle triangle = new Triangle("blue", 4, 4);
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Пожаллуйста введите radius, для нахождения периметра круга по формуле (P = 2  × π × radius): ");
+        double radius = scanner.nextInt();
+        Circle circle = new Circle("пурпурный", radius);
         String colorCircle = circle.getColor();
+        System.out.println("\u001B[35m" + "Круг: " + colorCircle);
+        System.out.println("\u001B[35m" + "Периметр (P = 2  × π × radius) кргуа =  " + circle.calculatePerimeter());
+        System.out.println(" ");
+
+        System.out.println("\u001B[0m" + "Пожаллуйста введите length и width, для нахождения периметра прямоугольника по формуле (P = 2 × (length + width) )");
+        double length = scanner.nextInt();
+        double width = scanner.nextInt();
+        Rectangle rectangle = new Rectangle("зеленый", length, width);
         String colorRectangle = rectangle.getColor();
+        System.out.println("\u001B[32m" + "Прямоугольник:" + colorRectangle);
+        System.out.println("\u001B[32m" + "Периметр (P = 2 × (length + width) прямоугольника = " + rectangle.calculatePerimeter());
+        System.out.println(" ");
+
+        System.out.println("\u001B[0m" + "Пожаллуйста введите width, для нахождения периметра равностороннего треугольника по формуле (P = 3 × width ): ");
+        double widthTriangle = scanner.nextInt();
+        Triangle triangle = new Triangle("голубой", widthTriangle, 0);
         String colorTriangle = triangle.getColor();
-
-        System.out.println("Circle: " + colorCircle);
-        System.out.println("Rectangle: " + colorRectangle);
-        System.out.println("Triangle: " + colorTriangle);
-
-        System.out.println(" ");
-
-        double resultAreaCircle = circle.calculateArea();
-        double resultAreaTriangle = rectangle.calculateArea();
-        double resultAreaRectangle = triangle.calculateArea();
-
-
-        System.out.println("Area of circle: " + resultAreaCircle);
-        System.out.println("Area of rectangle: " + resultAreaRectangle);
-        System.out.println("Area of triangle: " + resultAreaTriangle);
-
-        System.out.println(" ");
-
-        double resultPerimeterCircle = circle.calculatePerimeter();
-        double resultPerimeterTriangle = rectangle.calculatePerimeter();
-        double resultPerimeterRectangle = triangle.calculatePerimeter();
-
-        System.out.println("Perimeter of circle: " + resultPerimeterCircle);
-        System.out.println("Perimeter of rectangle: " + resultPerimeterTriangle);
-        System.out.println("Perimeter of triangle: " + resultPerimeterRectangle);
+        System.out.println("\u001B[36m" + "Треугольник:" + colorTriangle);
+        System.out.println("\u001B[36m" + "Периметр (P = 3 × width ) треугольника = " + triangle.calculatePerimeter());
     }
 }
