@@ -15,7 +15,7 @@ public class TriangleTest {
 
     }
 
-    @Test
+    @Test(timeout=1000)
     public void calculateSecondTestAreaResult() {
         Triangle triangleSecond = new Triangle("", 1,1);
         Assert.assertEquals(0.5, triangleSecond.calculateArea() ,0.1);
@@ -30,7 +30,7 @@ public class TriangleTest {
 
     }
 
-    @Test
+    @Test(timeout=5000)
     public void calculateFourTestAreaResult() {
         Triangle triangleFour = new Triangle("", 101,101);
         Assert.assertEquals(5100.5, triangleFour.calculateArea() ,0.1);

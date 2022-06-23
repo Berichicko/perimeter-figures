@@ -15,7 +15,7 @@ public class CircleTestArea {
 
     }
 
-    @Test
+    @Test(timeout=2000)
     public void calculateSecondTestAreaResult() {
         Circle circleSecond = new Circle("", 1);
         Assert.assertEquals(3.14, circleSecond.calculateArea(), 0.1);
@@ -31,7 +31,7 @@ public class CircleTestArea {
 
     }
 
-    @Test
+    @Test(timeout=5000)
     public void calculateFourTestAreaResult() {
         Circle circleFour = new Circle("", 101);
         Assert.assertEquals(32047.3, circleFour.calculateArea(), 0.1);

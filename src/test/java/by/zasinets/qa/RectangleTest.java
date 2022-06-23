@@ -17,7 +17,7 @@ public class RectangleTest {
 
     }
 
-    @Test
+    @Test(timeout=3000)
     public void calculateSecondTestAreaResult() {
         Rectangle rectangleSecond = new Rectangle("", 1,1);
         Assert.assertEquals(1, rectangleSecond.calculateArea() ,0.1);
@@ -32,7 +32,7 @@ public class RectangleTest {
 
     }
 
-    @Test
+    @Test(timeout=7000)
     public void calculateFourTestAreaResult() {
         Rectangle rectangleFour = new Rectangle("", 101,101);
         Assert.assertEquals(10201, rectangleFour.calculateArea() ,0.1);
@@ -70,7 +70,7 @@ public class RectangleTest {
         System.out.println("Test 2 -Rectangle - Perimeter- TEST SUCCESS ");
     }
 
-    @Test
+    @Test(timeout=6000)
     public void calculateTenTestPerimeter() {
         Rectangle rectangleTenPerimeter = new Rectangle("",100,100);
         Assert.assertEquals(400,rectangleTenPerimeter.calculatePerimeter(),0.1);

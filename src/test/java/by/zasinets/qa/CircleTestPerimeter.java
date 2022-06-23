@@ -12,7 +12,7 @@ public class CircleTestPerimeter {
         System.out.println("Test 1 - Circle - Perimeter- TEST SUCCESS ");
     }
 
-    @Test
+    @Test(timeout=1000)
     public void calculateSecondTestPerimeter() {
         Circle circleSecondPerimeter = new Circle("",1);
         Assert.assertEquals(6.2,circleSecondPerimeter.calculatePerimeter(),0.1);
@@ -26,7 +26,7 @@ public class CircleTestPerimeter {
         System.out.println("Test 3 - Circle - Perimeter- TEST SUCCESS ");
     }
 
-    @Test
+    @Test(timeout=6000)
     public void calculateFourTestPerimeter() {
         Circle circleFourPerimeter = new Circle("",101);
         Assert.assertEquals(634.6,circleFourPerimeter.calculatePerimeter(),0.1);
