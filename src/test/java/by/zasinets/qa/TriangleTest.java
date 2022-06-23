@@ -1,11 +1,17 @@
 package by.zasinets.qa;
 
+import org.junit.AfterClass;
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class TriangleTest {
+    @BeforeClass
+    public static void beginTest (){
+        System.out.println("Start testing");
+    }
 
     @Test
     public void calculateOneTestAreaResult() {
@@ -94,5 +100,9 @@ public class TriangleTest {
         Triangle triangleThirteenPerimeter = new Triangle("",-100,100);
         Assert.assertEquals(triangleThirteenPerimeter.calculatePerimeter(),0.1);
         System.out.println("Test 6 -Triangle - Perimeter- TEST SUCCESS ");
+    }
+    @AfterClass
+    public static void endTest (){
+        System.out.println("End Testing");
     }
 }

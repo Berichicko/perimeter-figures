@@ -1,12 +1,14 @@
 package by.zasinets.qa;
 
-import org.junit.Assert;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.*;
 
 import static org.junit.Assert.*;
 
 public class RectangleTest {
+    @BeforeClass
+    public static void beginTest (){
+        System.out.println("Start testing");
+    }
 
 
     @Test
@@ -96,5 +98,9 @@ public class RectangleTest {
         Rectangle rectangleThirteenPerimeter = new Rectangle("",-100,100);
         Assert.assertEquals(rectangleThirteenPerimeter.calculatePerimeter(),0.1);
         System.out.println("Test 6 -Rectangle - Perimeter- TEST SUCCESS ");
+    }
+    @AfterClass
+    public static void endTest (){
+        System.out.println("End Testing");
     }
 }

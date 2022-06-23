@@ -1,10 +1,14 @@
 package by.zasinets.qa;
 
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.*;
 
 public class CircleTestArea {
+
+    @BeforeClass
+    public static void beginTest (){
+        System.out.println("Start testing");
+    }
 
 
     @Test(timeout=1000)
@@ -52,5 +56,10 @@ public class CircleTestArea {
         Circle circleSix = new Circle("", -100);
         Assert.assertEquals(circleSix.calculateArea(), 0.1);
         System.out.println("Test 6-  Circle - Area -TEST SUCCESS ");
+    }
+
+    @AfterClass
+    public static void endTest (){
+        System.out.println("End Testing");
     }
 }

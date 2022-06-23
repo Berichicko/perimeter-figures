@@ -1,10 +1,13 @@
 package by.zasinets.qa;
 
-import org.junit.Assert;
-import org.junit.Ignore;
-import org.junit.Test;
+import org.junit.*;
 
 public class CircleTestPerimeter {
+
+    @BeforeClass
+    public static void beginTest (){
+        System.out.println("Start testing");
+    }
 
     @Test
     public void calculateOneTestPerimeter() {
@@ -48,5 +51,10 @@ public class CircleTestPerimeter {
         Circle circleSixPerimeter = new Circle("",-100);
         Assert.assertEquals(circleSixPerimeter.calculatePerimeter(),0.1);
         System.out.println("Test 6 - Circle - Perimeter- TEST SUCCESS ");
+    }
+
+    @AfterClass
+    public static void endTest (){
+        System.out.println("End Testing");
     }
   }
