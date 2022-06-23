@@ -20,6 +20,7 @@ public class RectangleTest {
     }
 
     @Test(timeout=3000)
+    @After
     public void calculateSecondTestAreaResult() {
         Rectangle rectangleSecond = new Rectangle("", 1,1);
         Assert.assertEquals(1, rectangleSecond.calculateArea() ,0.1);
@@ -27,6 +28,7 @@ public class RectangleTest {
 
     }
     @Test
+    @Before
     public void calculateThirdTestAreaResult() {
         Rectangle rectangleThird = new Rectangle("", 100,100);
         Assert.assertEquals(10000, rectangleThird.calculateArea() ,0.1);

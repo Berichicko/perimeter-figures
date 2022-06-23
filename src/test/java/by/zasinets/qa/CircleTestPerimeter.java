@@ -24,6 +24,7 @@ public class CircleTestPerimeter {
     }
 
     @Test
+    @Before
     public void calculateThirdTestPerimeter() {
         Circle circleThirdPerimeter = new Circle("",100);
         Assert.assertEquals(628.3,circleThirdPerimeter.calculatePerimeter(),0.1);
@@ -31,6 +32,7 @@ public class CircleTestPerimeter {
     }
 
     @Test(timeout=6000)
+    @After
     public void calculateFourTestPerimeter() {
         Circle circleFourPerimeter = new Circle("",101);
         Assert.assertEquals(634.6,circleFourPerimeter.calculatePerimeter(),0.1);
