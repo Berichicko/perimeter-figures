@@ -1,6 +1,7 @@
 package by.zasinets.qa;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class CircleTestPerimeter {
@@ -32,14 +33,16 @@ public class CircleTestPerimeter {
         Assert.assertEquals(634.6,circleFourPerimeter.calculatePerimeter(),0.1);
         System.out.println("Test 4 - Circle - Perimeter- TEST SUCCESS ");
     }
-
+    @Ignore
     @Test (expected = IllegalArgumentException.class)
-    public void calculateFiveTestPerimeter() {
+    public void calculateFiveTestPerimeter() throws InterruptedException {
+        Thread.sleep(5000);
         Circle circleFivePerimeter = new Circle("",-1);
         Assert.assertEquals(circleFivePerimeter.calculatePerimeter(),0.1);
         System.out.println("Test 5 - Circle - Perimeter- TEST SUCCESS ");
     }
 
+    @Ignore
     @Test (expected = IllegalArgumentException.class)
     public void calculateSixTestPerimeter() {
         Circle circleSixPerimeter = new Circle("",-100);
