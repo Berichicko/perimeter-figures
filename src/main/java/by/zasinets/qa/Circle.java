@@ -12,13 +12,20 @@ class Circle extends Shape implements Mathable {
 
     @Override
     public double calculateArea() {
+        if ((0 > this.RADIUS) ) {
+            throw new IllegalArgumentException();
+        }
         double resultAreaCircle = (Math.PI * (RADIUS * RADIUS));
         return resultAreaCircle;
     }
 
     @Override
     double calculatePerimeter() {
+        if ((0 > this.RADIUS) ) {
+            throw new IllegalArgumentException();
+        }
         double resultPerimeterCircle = (2 * Math.PI * RADIUS);
         return resultPerimeterCircle;
     }
+
 }

@@ -11,14 +11,21 @@ class Triangle extends Shape implements Mathable {
         this.HEIGHT = HEIGHT;
     }
 
+
     @Override
     public double calculateArea() {
+        if ((this.HEIGHT <0 || this.WIDTH<0) ) {
+            throw new IllegalArgumentException();
+        }
         double resultAreaTriangle =((WIDTH * HEIGHT) / 2);
         return resultAreaTriangle;
     }
 
     @Override
     double calculatePerimeter() {
+        if ((this.HEIGHT <0 || this.WIDTH<0) ) {
+            throw new IllegalArgumentException();
+        }
         double resultPerimeterTriangle = (3 * WIDTH);
         return resultPerimeterTriangle;
     }
